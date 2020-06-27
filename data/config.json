@@ -1,0 +1,9 @@
+{
+	"sensor_name": "frente",
+	"wifi_network_name": "Mofos House",
+	"wifi_network_password": "stptff26",
+	"mqtt_server_address": "192.168.0.105",
+	"mqtt_server_port": 1883,
+	"mqtt_server_username": "agent",
+	"mqtt_server_password": "agent707"
+}

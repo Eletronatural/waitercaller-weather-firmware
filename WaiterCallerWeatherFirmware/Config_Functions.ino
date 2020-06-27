@@ -14,6 +14,9 @@ bool loadConfig() {
   }  
 
   // Copy values from the JsonDocument to the Config
+  strcpy(sensorName, doc["sensor_name"]);
+  Serial.print("Sensor Name: "); Serial.println(sensorName);
+  strcat(topicWeather, sensorName);
   strcpy(ssid, doc["wifi_network_name"]);
   Serial.print("Loaded Wifi Network Name: "); Serial.println(ssid);
   strcpy(password, doc["wifi_network_password"]);

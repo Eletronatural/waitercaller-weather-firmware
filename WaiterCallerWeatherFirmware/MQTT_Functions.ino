@@ -9,7 +9,9 @@ void reconnect() {
     if (client.connect(clientId.c_str(), mqttUser, mqttPassword)) {
       Serial.println("connected");
       // Once connected, publish an announcement...
-      client.publish("waitercaller/device-start-notice", "weather");
+      char deviceName[38] = "weather-";
+      strcat(deviceName, sensorName);
+      client.publish("waitercaller/device-start-notice", deviceName);
       // ... and resubscribe
       // client.subscribe("inTopic");
     } else {
